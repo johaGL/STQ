@@ -22,13 +22,14 @@ process SPACERANGER {
     cp ${fastq[0]} \${tempfastqdir}/sample_S1_L001_R1_001.fastq
     cp ${fastq[1]} \${tempfastqdir}/sample_S1_L001_R2_001.fastq
     
-    spaceranger count \
+    ${params.local_spaceranger} count \
     --id=sample \
     --sample=sample \
     --fastqs="\${tempfastqdir}" \
     --image=${image} \
     --transcriptome=${reference} \
-    --unknown-slide \
+    --unknown-slide "visium-1" \
+    --reorient-images true \
     --localcores=${task.cpus} \
     --localmem=${memgb}
     

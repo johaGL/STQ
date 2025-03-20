@@ -15,6 +15,8 @@
 
 scontrol show job $SLURM_JOB_ID
 
+module load xenome
+
 workdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST"
 samplesheet="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/demodata/samplesheet_demo_local.csv"
 outdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/results"

@@ -16,13 +16,13 @@ process XENOME_GENERATE_INDEX {
     """
     mkdir tempw
     
-    /xenome-1.0.1-r/xenome index \
+    ${params.local_xenome} index \
     --kmer-size ${kmer_size} \
     --prefix ${params.deconvolution_indices_name} \
     --tmp-dir tempw \
     --num-threads ${task.cpus} \
-    --host "${host_fasta}" \
-    --graft "${graft_fasta}" \
+    --host ${params.deconvolution_reference_host} \
+    --graft ${params.deconvolution_reference_graft} \
     --verbose \
     --max-memory 20
     """
@@ -73,7 +73,7 @@ process DECONVOLUTION_XENOME {
     mkdir categorized
     mkdir tmp
 
-    /xenome-1.0.1-r/xenome classify \
+    ${params.local_xenome} classify \
     -T ${task.cpus} \
     -i ${fastq[0]} \
     -i ${fastq[1]} \

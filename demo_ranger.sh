@@ -15,6 +15,7 @@
 scontrol show job $SLURM_JOB_ID
 
 module load xenome
+module load fastqtools/0.8.3
 
 workdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST"
 samplesheet="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/demodata/samplesheet_demo_local.csv"

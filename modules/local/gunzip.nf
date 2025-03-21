@@ -11,7 +11,7 @@ process GUNZIP {
     
     script:
     """   
-    gzip -d -k ${fastq}
+    gzip -d -f ${fastq}
     """
 }
 
@@ -29,7 +29,7 @@ process GUNZIP_SEPARATE {
     
     script:
     """   
-    gzip -d -k ${fastq}
+    gzip -d -f ${fastq}
     """
 }
 
@@ -44,6 +44,6 @@ process GUNZIP_FASTA {
     
     script:
     """   
-    gzip -d -k ${fasta}
+    gzip -d -f ${fasta}
     """
 }

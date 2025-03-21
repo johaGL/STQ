@@ -13,6 +13,7 @@
 
 #####
 # INDEX: only run once as same index is valid for all mappings
+#   Note: launched from above STQ -->  sbatch STQ/index_run_once.sh
 #####
 
 scontrol show job $SLURM_JOB_ID

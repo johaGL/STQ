@@ -11,11 +11,15 @@
 #SBATCH --mail-type=ALL
 
 ## Note: launch from above STQ -->  sbatch STQ/demo_ranger.sh
+##       always launch `module load nextflow` beforehand
+##       (Metabo/stable module comes with: numpy, scipy, pd, scanpy)
 
 scontrol show job $SLURM_JOB_ID
 
 module load xenome
 module load fastqtools/0.8.3
+module load Metabo/stable
+
 
 workdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST"
 samplesheet="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/demodata/samplesheet_demo_local.csv"

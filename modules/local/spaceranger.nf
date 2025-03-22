@@ -30,7 +30,7 @@ process SPACERANGER {
     --transcriptome=${reference} \
     --unknown-slide "visium-1" \
     --reorient-images true \
-    --create-bam=false \
+    --create-bam=true \
     --localcores=${task.cpus} \
     --localmem=${memgb}
     

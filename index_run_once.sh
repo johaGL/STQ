@@ -23,7 +23,7 @@ module load xenome
 workdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST"
 samplesheet="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/demodata/samplesheet_demo_local.csv"
 outdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/results"
-binddir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/mybinddir"
+binddir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/sing_bin"
 
 
 nextflow run STQ/main.nf \

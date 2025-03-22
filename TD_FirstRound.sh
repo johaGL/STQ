@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --nodes=1
-#SBATCH --mem=180G
-#SBATCH -t 10-40:00:00
+#SBATCH --mem=220G
+#SBATCH -t 30-40:00:00
 #SBATCH --ntasks-per-node=4
 #SBATCH --job-name=stqJoha
 #SBATCH --output=/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/slurmout/stq_%j.out
@@ -22,7 +22,7 @@ module load Metabo/stable
 
 
 workdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST"
-samplesheet="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/demodata/samplesheet_demo_local.csv"
+samplesheet="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/TD_FirstRound.csv"
 outdir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/results"
 binddir="/mnt/cbib/thesis_gbm/spatial_thesis/map-xenograft-ST/sing_bin"
 
